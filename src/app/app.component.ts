@@ -7,10 +7,10 @@ import { Product } from '../product.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  product: Product[];
+  products: Product[];
 
   constructor() {
-    this.product = [
+    this.products = [
       new Product(
         'BLACKCAP',
         'A Black Baseball Cap',
@@ -33,5 +33,9 @@ export class AppComponent {
         89.95,
       ),
     ];
+  }
+
+  productWasSelected(product: Product): void {
+    console.log('Product clicked: ', product);
   }
 }
